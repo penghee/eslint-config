@@ -1,0 +1,63 @@
+{
+  "name": "@penghee/eslint-config",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.10.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "tsc": "pnpm --package=typescript dlx tsc",
+    "typecheck": "pnpm --package=typescript dlx tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npx husky init",
+    "prepare": "husky",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penghee/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "author": "penghee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/penghee/eslint-config/issues"
+  },
+  "homepage": "https://github.com/penghee/eslint-config#readme",
+  "description": "eslint config",
+  "engines": {
+    "node": ">=22.15.0",
+    "pnpm": ">=10.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "jiti": "^2.4.2",
+    "lint-staged": "^15.5.2",
+    "tsc": "^2.0.4",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "eslint": "^9.26.0"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
+    "eslint": "^9.26.0",
+    "eslint-flat-config-utils": "^2.0.1"
+  }
+}
