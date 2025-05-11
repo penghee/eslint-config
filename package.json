@@ -1,6 +1,6 @@
 {
   "name": "@penghee/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@10.10.0",
   "type": "module",
   "exports": {
