@@ -15,7 +15,7 @@
     "build": "tsup",
     "tsc": "pnpm --package=typescript dlx tsc",
     "typecheck": "pnpm --package=typescript dlx tsc --noEmit",
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "npm run build && npm run lint",
     "postinstall": "npx husky init",
     "prepare": "husky",
     "lint": "eslint src --ext .ts,.tsx",
